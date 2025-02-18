@@ -14,7 +14,7 @@ import org.springframework.ui.Model;
 @Controller
 public class HomeController {
 	
-	@RequestMapping("/home")
+	@RequestMapping("/")
 	public String home(Model model) {
 		model.addAttribute("title", "Home page - Smart Contact Manager");
 		return "home";
@@ -24,6 +24,12 @@ public class HomeController {
 	public String about(Model model) {
 		model.addAttribute("title", "About page - Smart Contact Manager");
 		return "about";
+	}
+	
+	@RequestMapping("/signup")
+	public String signup(Model model) {
+		model.addAttribute("title", "Signup page - Smart Contact Manager");
+		return "signup";
 	}
 	
 }
